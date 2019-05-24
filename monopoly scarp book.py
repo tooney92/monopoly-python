@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[3]:
-
-
 import random
 import gc
 import weakref
@@ -20,7 +14,7 @@ class Property:
         self.property_color = property_color
         self.property_mortgage_value = property_mortgage_value
         self.property_rent = property_rent
-        
+
     def property_with_houses(self, cost_of_house, cost_of_hotel,  rent_with_hotel, rent_with_1house, rent_with_2house, rent_with_3house, rent_with_4house):
         self.cost_of_house = cost_of_house
         self.cost_of_hotel = cost_of_hotel
@@ -29,7 +23,7 @@ class Property:
         self.rent_with_2house = rent_with_2house
         self.rent_with_3house = rent_with_3house
         self.rent_with_4house = rent_with_4house
- 
+
 
 
 
@@ -41,48 +35,48 @@ class Stations:
         self.board_position = board_position
         self.cost = cost
         self.rent = rent
-        
+
 class Utilities:
-    
+
     instances = []
     def __init__(self, object_name,board_position, property_name, cost):
         self.__class__.instances.append(weakref.proxy(self))
         self.property_name = property_name
         self.board_position = board_position
         self.cost = cost
-        
+
 class Chance_card:
     def __init__ (self, card_number, content, effect):
         self.content = content
         self.effect = effect
         self.card_number = card_number
-        
+
 class Community_chest:
     def __init__ (self, card_number, content, effect):
         self.content = content
         self.effect = effect
         self.card_number = card_number
-        
+
 class Player:
     def __init__(self, name, balance = 1500):
         self.name = name
         self.balance = balance
-        
+
     def __str__(self):
         return self.name
-        
+
     def debit(self, amount):
         if amount >  self.balance:
             self.balance = 'bankrupt!'
             return self.balance
-            
-        else:
-            self.balance = self.balance - amount 
-            return self.balance
-                
 
-player1 = Player('tony')       
- 
+        else:
+            self.balance = self.balance - amount
+            return self.balance
+
+
+player1 = Player('tony')
+
 brown1 = Property('brown1',1,'Old kent road', 60, 'brown', 30, 2)
 brown2 = Property('brown2',3,'White chapel road', 60, 'brown', 30, 4)
 blue1 = Property('blue1',6,'Angel islington', 100, 'blue', 50, 6)
@@ -119,60 +113,60 @@ brown2.property_with_houses(30, 150, 450, 20, 60, 180, 360)
 blue1.property_with_houses(50, 250, 550, 30, 90, 270, 400)
 blue2.property_with_houses(50, 250, 550, 30, 90, 270, 400)
 blue3.property_with_houses(50, 250, 600, 40, 100, 300, 450)
-pink1.property_with_houses(100, 500, 750, 50, 150, 450, 625) 
-pink2.property_with_houses(100, 500, 750, 50, 150, 450, 625) 
-pink3.property_with_houses(100, 500, 900, 60, 180, 500, 700) 
+pink1.property_with_houses(100, 500, 750, 50, 150, 450, 625)
+pink2.property_with_houses(100, 500, 750, 50, 150, 450, 625)
+pink3.property_with_houses(100, 500, 900, 60, 180, 500, 700)
 orange1.property_with_houses(100, 500, 950, 70, 200, 550, 750)
 orange2.property_with_houses(100, 500, 950, 70, 200, 550, 750)
 orange3.property_with_houses(100, 500, 1000, 80, 220, 600, 800)
 red1.property_with_houses(150, 750, 1050, 90, 250, 700, 875)
 red2.property_with_houses(150, 750, 1050, 90, 250, 700, 875)
 red3.property_with_houses(150, 750, 1100, 100, 300, 750, 925)
-yellow1.property_with_houses(150, 750, 1150, 110, 330, 800, 975) 
+yellow1.property_with_houses(150, 750, 1150, 110, 330, 800, 975)
 yellow2.property_with_houses(150, 750, 1150, 110, 330, 800, 975)
-yellow3.property_with_houses(150, 750, 1200, 120, 360, 850, 1025) 
-green1.property_with_houses(160, 800, 1275, 130, 390, 900, 1100) 
+yellow3.property_with_houses(150, 750, 1200, 120, 360, 850, 1025)
+green1.property_with_houses(160, 800, 1275, 130, 390, 900, 1100)
 green2.property_with_houses(160, 800, 1275, 130, 390, 900, 1100)
-green3.property_with_houses(160, 800, 1400, 150, 450, 1000, 1200) 
+green3.property_with_houses(160, 800, 1400, 150, 450, 1000, 1200)
 purple1.property_with_houses(200, 1000, 1500, 175, 500, 1100, 1300)
-purple2.property_with_houses(200, 1000, 2000, 200, 600, 1400, 1700) 
+purple2.property_with_houses(200, 1000, 2000, 200, 600, 1400, 1700)
 
 
-    
-board = [brown1.board_position, brown2.board_position, blue1.board_position, blue2.board_position,blue3.board_position,pink1.board_position, 
-pink2.board_position,pink3.board_position,orange1.board_position,orange2.board_position,orange3.board_position,red1.board_position,red2.board_position,red3.board_position,yellow1.board_position ,yellow2.board_position,yellow3.board_position ,green1.board_position ,green2.board_position,green3.board_position,purple1.board_position,purple2.board_position, station1.board_position, station2.board_position, station3.board_position, station4.board_position, utility1.board_position, utility2.board_position]        
+
+board = [brown1.board_position, brown2.board_position, blue1.board_position, blue2.board_position,blue3.board_position,pink1.board_position,
+pink2.board_position,pink3.board_position,orange1.board_position,orange2.board_position,orange3.board_position,red1.board_position,red2.board_position,red3.board_position,yellow1.board_position ,yellow2.board_position,yellow3.board_position ,green1.board_position ,green2.board_position,green3.board_position,purple1.board_position,purple2.board_position, station1.board_position, station2.board_position, station3.board_position, station4.board_position, utility1.board_position, utility2.board_position]
 
 player_position_1 =[]
 
 def roll_dice():
-    
+
     dice1 = [1,2,3,4,5,6]
     dice2 = [1,2,3,4,5,6]
     d1 = random.choice(dice1)
     d2 = random.choice(dice2)
     player_position_1.append(d1)
     player_position_1.append(d2)
-    
+
     #if d1 == d2:
         #new_d1 = random.choice(dice1)
         #new_d2 = random.choice(dice2)
         #print(new_d1, new_d2)
-    
-    
+
+
     print(d1, d2)
-    
+
 if sum(player_position_1) > 40:
     player_position_1 = [sum(player_position_1 ) - 40]
 
 
 def add_dice():
-    return sum(player_position_1)    
-    
+    return sum(player_position_1)
+
 def check_if_players_pass_go():
     if sum(player_position_1) > 41:
         print('yes')
-          
-    
+
+
 
 board_num_expression = {}
 for n in board:
@@ -221,10 +215,10 @@ def board_check():
         print(board_num_expression[n].property_name)
 
 def board_position_check(list_):
-    
+
     if str(sum(list_)) in board_num_expression.keys():
         print('Player is on',board_num_expression[str(sum(list_))].property_name)
-       
+
     '''
         if board_num_expression[str(sum(list_))].property_name not in player_property_list:
             #player_property_list.append(board_num_expression[str(sum(list_))])
@@ -235,13 +229,8 @@ def board_position_check(list_):
         return list_
         if str(sum(list_)) in board_num_expression.keys():
             print('Player is on',board_num_expression[str(sum(list_))].property_name)
-        
+
     '''
-     
-
-
-# In[7]:
-
 
 player_position_1 =[]
 player_property_list = []
@@ -262,51 +251,8 @@ def property_assignemnt(list_):
     else:
         pass
 
-
-# In[14]:
-
-
 roll_dice()
 add_dice()
 board_position_check(player_position_1)
 property_assignemnt(player_position_1)
-
-
-# In[15]:
-
-
-player_property_list
-
-
-# In[233]:
-
-
-player_position_1
-
-
-# In[234]:
-
-
-name = "Eric"
-age = 74
-print( f"Hello, {name}. You are {age}" )
-
-
-# In[ ]:
-
-
-roll_dice()
-add_dice()
-
-
-# In[2]:
-
-
-5+5
-
-
-# In[ ]:
-
-
-
-
+print(player_property_list)
