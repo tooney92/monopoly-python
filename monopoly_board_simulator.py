@@ -162,13 +162,10 @@ def add_dice():
 def check_if_players_pass_go():
     if sum(player_position_1) > 41:
         print('yes')
-          
-    
 
 board_num_expression = {}
 for n in board:
     board_num_expression.update({str(n): n})
-
 
 board_num_expression['1'] = Property('brown1',1,'Old kent road', 60, 'brown', 30, 2)
 board_num_expression['3'] = Property('brown2',3,'White chapel road', 60, 'brown', 30, 4)
