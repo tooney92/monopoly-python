@@ -26,9 +26,6 @@ class Property:
         self.rent_with_2house = rent_with_2house
         self.rent_with_3house = rent_with_3house
         self.rent_with_4house = rent_with_4house
- 
-
-
 
 class Stations:
     instances = []
@@ -77,7 +74,6 @@ class Player:
             self.balance = self.balance - amount 
             return self.balance
                 
-
 player1 = Player('tony')       
  
 brown1 = Property('brown1',1,'Old kent road', 60, 'brown', 30, 2)
@@ -134,8 +130,6 @@ green3.property_with_houses(160, 800, 1400, 150, 450, 1000, 1200)
 purple1.property_with_houses(200, 1000, 1500, 175, 500, 1100, 1300)
 purple2.property_with_houses(200, 1000, 2000, 200, 600, 1400, 1700) 
 
-
-    
 board = [brown1.board_position, brown2.board_position, blue1.board_position, blue2.board_position,blue3.board_position,pink1.board_position, 
 pink2.board_position,pink3.board_position,orange1.board_position,orange2.board_position,orange3.board_position,red1.board_position,red2.board_position,red3.board_position,yellow1.board_position ,yellow2.board_position,yellow3.board_position ,green1.board_position ,green2.board_position,green3.board_position,purple1.board_position,purple2.board_position, station1.board_position, station2.board_position, station3.board_position, station4.board_position, utility1.board_position, utility2.board_position]        
 
@@ -206,7 +200,6 @@ board_num_expression['35'] = Stations('station4',35,"Liverpool Street Station",2
 
 board_num_expression['12'] = Utilities('utility1',12,'Electric Company', 150)
 board_num_expression['28'] = Utilities('utility2',28,'Water Works', 150)
-
 
 player_property_list = []
 
